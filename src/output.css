@@ -280,6 +280,9 @@
   .mt-\[0px\] {
     margin-top: 0px;
   }
+  .mt-\[20px\] {
+    margin-top: 20px;
+  }
   .mt-\[50px\] {
     margin-top: 50px;
   }
@@ -354,6 +357,9 @@
   }
   .h-\[318px\] {
     height: 318px;
+  }
+  .h-\[369px\] {
+    height: 369px;
   }
   .h-\[650\] {
     height: 650;
@@ -538,6 +544,9 @@
   }
   .bg-\[\#212731\] {
     background-color: #212731;
+  }
+  .bg-\[\#2127310D\] {
+    background-color: #2127310D;
   }
   .bg-\[\#D7B18D\] {
     background-color: #D7B18D;
@@ -779,6 +788,11 @@
   .lg\:h-\[303px\] {
     @media (width >= 64rem) {
       height: 303px;
+    }
+  }
+  .lg\:h-\[369px\] {
+    @media (width >= 64rem) {
+      height: 369px;
     }
   }
   .lg\:h-\[746px\] {
