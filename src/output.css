@@ -385,6 +385,12 @@
   .flex-col {
     flex-direction: column;
   }
+  .flex-row {
+    flex-direction: row;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
   .items-center {
     align-items: center;
   }
@@ -412,6 +418,9 @@
   .gap-2\.5 {
     gap: calc(var(--spacing) * 2.5);
   }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
   }
@@ -420,6 +429,12 @@
   }
   .gap-\[15px\] {
     gap: 15px;
+  }
+  .gap-\[20px\] {
+    gap: 20px;
+  }
+  .gap-\[30px\] {
+    gap: 30px;
   }
   .rounded {
     border-radius: 0.25rem;
@@ -436,6 +451,12 @@
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
+  }
+  .border-\[\#00000014\] {
+    border-color: #00000014;
+  }
+  .border-\[\#D7B18D\] {
+    border-color: #D7B18D;
   }
   .bg-\[\#28303D\] {
     background-color: #28303D;
@@ -515,6 +536,9 @@
   .text-\[20px\] {
     font-size: 20px;
   }
+  .text-\[21px\] {
+    font-size: 21px;
+  }
   .text-\[24px\] {
     font-size: 24px;
   }
@@ -524,12 +548,33 @@
   .text-\[80px\] {
     font-size: 80px;
   }
+  .font-\[3\] {
+    --tw-font-weight: 3;
+    font-weight: 3;
+  }
+  .font-\[600\] {
+    --tw-font-weight: 600;
+    font-weight: 600;
+  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  .text-\[\#08A652\] {
+    color: #08A652;
+  }
+  .text-\[\#848C9A\] {
+    color: #848C9A;
+  }
   .text-\[\#212731\] {
     color: #212731;
+  }
+  .text-\[1\] {
+    color: 1;
   }
   .text-\[2\] {
     color: 2;
@@ -609,6 +654,11 @@
       display: flex;
     }
   }
+  .lg\:h-\[136px\] {
+    @media (width >= 64rem) {
+      height: 136px;
+    }
+  }
   .lg\:h-\[235px\] {
     @media (width >= 64rem) {
       height: 235px;
@@ -617,6 +667,21 @@
   .lg\:h-\[278px\] {
     @media (width >= 64rem) {
       height: 278px;
+    }
+  }
+  .lg\:h-\[303\] {
+    @media (width >= 64rem) {
+      height: 303;
+    }
+  }
+  .lg\:h-\[303px0\] {
+    @media (width >= 64rem) {
+      height: 303px0;
+    }
+  }
+  .lg\:h-\[303px\] {
+    @media (width >= 64rem) {
+      height: 303px;
     }
   }
   .lg\:h-\[746px\] {
@@ -634,6 +699,11 @@
       height: 846px;
     }
   }
+  .lg\:w-\[4\] {
+    @media (width >= 64rem) {
+      width: 4;
+    }
+  }
   .lg\:w-\[160px\] {
     @media (width >= 64rem) {
       width: 160px;
@@ -642,6 +712,21 @@
   .lg\:w-\[360px\] {
     @media (width >= 64rem) {
       width: 360px;
+    }
+  }
+  .lg\:w-\[380px\] {
+    @media (width >= 64rem) {
+      width: 380px;
+    }
+  }
+  .lg\:w-\[439p\] {
+    @media (width >= 64rem) {
+      width: 439p;
+    }
+  }
+  .lg\:w-\[439px\] {
+    @media (width >= 64rem) {
+      width: 439px;
     }
   }
   .lg\:w-\[528px\] {
@@ -824,6 +909,14 @@
       font-size: 80px;
     }
   }
+  .lg\:text-shadow-current {
+    @media (width >= 64rem) {
+      --tw-text-shadow-color: currentcolor;
+      @supports (color: color-mix(in lab, red, red)) {
+        --tw-text-shadow-color: color-mix(in oklab, currentcolor var(--tw-text-shadow-alpha), transparent);
+      }
+    }
+  }
 }
 @property --tw-border-style {
   syntax: "*";
@@ -839,12 +932,23 @@
   inherits: false;
   initial-value: solid;
 }
+@property --tw-text-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-text-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
       --tw-font-weight: initial;
       --tw-outline-style: solid;
+      --tw-text-shadow-color: initial;
+      --tw-text-shadow-alpha: 100%;
     }
   }
 }
